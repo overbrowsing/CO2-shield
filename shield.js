@@ -6,8 +6,11 @@ async function generateShield() {
   toggleLoading(true);
 
   try {
-    const { co2, rating, url: reportUrl } = await fetchCO2Data(url);
+    const { co2, rating } = await fetchCO2Data(url);
     const { color, details } = getRatingDetails(rating);
+
+    const reportUrl = `https://overbrowsing.com/co2-shield`;
+
     updateUI(generateShieldData(rating, co2, color, details, reportUrl), reportUrl, url);
   } catch {
     alert('Error fetching data. Please try again later.');
@@ -39,7 +42,7 @@ function getRatingDetails(rating) {
 function generateShieldData(rating, co2, color, details, reportUrl) {
   const co2Message = rating.toLowerCase() === 'a+' ? `${parseFloat(co2).toFixed(3)}g` : `${parseFloat(co2).toFixed(2)}g`;
   const shieldUrl = `https://img.shields.io/badge/CO₂-${rating.toUpperCase()}_${co2Message.replace(/ /g, '_')}-${color.replace('#', '')}`;
-  const markdown = `[CO2 Shield](${shieldUrl})](${reportUrl})`;
+  const markdown = `[CO₂ Shield](${shieldUrl})](${reportUrl})`;
   
   return { shieldUrl, markdown, details, rating, detailsList: generateDetailsList() };
 }
