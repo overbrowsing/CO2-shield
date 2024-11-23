@@ -39,7 +39,7 @@ function getRatingDetails(rating) {
 function generateShieldData(rating, co2, color, details, reportUrl) {
   const co2Message = rating.toLowerCase() === 'a+' ? `${parseFloat(co2).toFixed(3)}g` : `${parseFloat(co2).toFixed(2)}g`;
   const shieldUrl = `https://img.shields.io/badge/CO₂-${rating.toUpperCase()}_${co2Message.replace(/ /g, '_')}-${color.replace('#', '')}`;
-  const markdown = `[![${rating.toUpperCase()} Rated ${co2Message}](${shieldUrl})](${reportUrl})`;
+  const markdown = `[CO2 Shield](${shieldUrl})](${reportUrl})`;
   
   return { shieldUrl, markdown, details, rating, detailsList: generateDetailsList() };
 }
