@@ -1,0 +1,1 @@
+[![CO₂ Emissions: A+ 0.084g CO₂](https%3A%2F%2Fimg.shields.io%2Fbadge%2FCO%25E2%2582%2582%2520Emissions%253A%2520A%252B-0.084g%2520CO%25E2%2582%2582-brightgreen)](https://digitalbeacon.co/report/headless-horse/public)
