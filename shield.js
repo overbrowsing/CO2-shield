@@ -74,15 +74,17 @@ function updateUI({ shieldUrl, markdown, details, detailsList, rating }, reportU
   const resultContainer = document.createElement('div');
 
   resultContainer.innerHTML = `
-      <div id="result">
-        <p>${targetUrl} • ${rating.toUpperCase()} ${details}</p>
-        <img src="${shieldUrl}" style="margin-top: 1em">
-        <pre id="markdown">${markdown}</pre>
-        <button onclick="copy()">Copy</button>
-        <div class="rating-details">${detailsList}</div>
-        <button onclick="reset()">Reset</button>
-      </div>
-    `;
+    <div>
+      <h2>Results</h2>
+      <p>${targetUrl} • ${rating.toUpperCase()} ${details}</p>
+      <img src="${shieldUrl}">
+      <pre id="markdown">${markdown}</pre>
+      <button onclick="copy()">Copy</button>
+      <h2>Ratings</h2>
+      <div class="rating-details">${detailsList}</div>
+      <button onclick="reset()">Reset</button>
+    </div>
+  `;
 
   buttonContainer.insertAdjacentElement('afterend', resultContainer);
 }
