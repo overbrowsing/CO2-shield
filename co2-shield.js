@@ -74,7 +74,7 @@ function updateUI({ shieldUrl, markdown, details, detailsList, rating }, reportU
   const resultContainer = document.createElement('div');
 
   resultContainer.innerHTML = `
-    <div>
+    <div id="result">
       <h2>Results</h2>
       <p>${targetUrl} • ${rating.toUpperCase()} ${details}</p>
       <img src="${shieldUrl}">
