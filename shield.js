@@ -81,7 +81,6 @@ function updateUI({ shieldUrl, markdown, details, detailsList, rating }, reportU
         <button onclick="copy()">Copy</button>
         <div class="rating-details">${detailsList}</div>
         <button onclick="reset()">Reset</button>
-        <a href="https://github.com/overbrowsing/co2-shield" target="_blank">View code on Github</a>
       </div>
     `;
 
