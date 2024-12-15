@@ -53,7 +53,7 @@ function updateUI({ shieldUrl, markdown, details }, targetUrl) {
   formSection.insertAdjacentHTML('beforeend', `
     <div id="result">
       <h2>Results</h2>
-      <p>${targetUrl} • ${details}</p>
+      <p>${targetUrl} • ${details} • Scroll down to learn about the ratings.</p>
       <img src="${shieldUrl}" alt="CO₂ Shield" style="display:block;width:auto;height:20px">
       <pre>${markdown}</pre>
       <button onclick="copy()">Copy</button>
@@ -62,11 +62,15 @@ function updateUI({ shieldUrl, markdown, details }, targetUrl) {
   if (!document.getElementById('ratings')) {
     formSection.insertAdjacentHTML('afterend', `
     <section id="ratings">
+      <hr>
       <h2>Ratings</h2>
-      ${Object.keys(ratingDetails).map(rating => {
-        const [color, details] = ratingDetails[rating];
-        return `<div><span style="color:${color};">●</span> ${rating.toUpperCase()} • ${details}</div>`;
-      }).join('')}
+      <p>These measurements are for new visitors. Returning visitors have a lower footprint due to caching.</p>
+      <ul>
+        ${Object.keys(ratingDetails).map(rating => {
+          const [color, details] = ratingDetails[rating];
+          return `<li><span style="color:${color};">●</span> ${rating.toUpperCase()} • ${details}</li>`;
+        }).join('')}
+      <ul>
       <button onclick="reset()">Reset</button>
     </section>`);
   }
