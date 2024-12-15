@@ -25,7 +25,7 @@ async function generate() {
   const loadingInterval = setInterval(() => {
     dots = (dots + 1) % 4;
     button.innerHTML = `Loading${'.'.repeat(dots)}`;
-  }, 500);
+  }, 350);
 
   try {
     const { co2, rating } = await fetchCO2(url);
@@ -39,6 +39,7 @@ async function generate() {
     clearInterval(loadingInterval);
     button.innerHTML = 'Submit';
     button.disabled = 0;
+    input.value = '';
   }
 }
 
