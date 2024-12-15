@@ -30,7 +30,7 @@ async function generate() {
   try {
     const { co2, rating } = await fetchCO2(url);
     const [color, details] = ratingDetails[rating.toLowerCase()];
-    const shieldUrl = `https://img.shields.io/badge/CO₂-${rating.toUpperCase()}_${parseFloat(co2).toFixed(rating === 'a+' ? 3 : 2).replace(/ /g, '_')}-${color.replace('#', '')}`;
+    const shieldUrl = `https://img.shields.io/badge/CO₂-${rating.toUpperCase()}_${parseFloat(co2).toFixed(rating === 'a+' ? 3 : 2).replace(/ /g, '_')}g-${color.replace('#', '')}`;
     const markdown = `[![CO₂ Shield](${shieldUrl})](https://overbrowsing.com/projects/co2-shield)`;
     updateUI({ shieldUrl, markdown, details }, url);
   } catch {
