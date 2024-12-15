@@ -6,13 +6,13 @@ form.onsubmit = e => { e.preventDefault(); generate(); };
 input.onkeypress = e => { if (e.key === 'Enter') { e.preventDefault(); generate(); } };
 
 const ratingDetails = {
-  'a+': ['#4CAF50', 'Less than 0.095g'],
-  'a': ['#8BC34A', 'Less than 0.185g'],
-  'b': ['#FFC107', 'Less than 0.34g'],
-  'c': ['#FF9800', 'Less than 0.49g'],
-  'd': ['#FF5722', 'Less than 0.65g'],
-  'e': ['#F44336', 'Less than 0.85g'],
-  'f': ['#D32F2F', 'Above 0.85g']
+  'a+': ['#58C521', 'Less than 0.095g'],
+  'a': ['#20AE69', 'Less than 0.185g'],
+  'b': ['#2D8EAC', 'Less than 0.34g'],
+  'c': ['#C89806', 'Less than 0.49g'],
+  'd': ['#C05328', 'Less than 0.65g'],
+  'e': ['#B71E1E', 'Less than 0.85g'],
+  'f': ['#652A2A', 'Above 0.85g']
 };
 
 async function generate() {
@@ -31,7 +31,7 @@ async function generate() {
     const { co2, rating } = await fetchCO2(url);
     const [color, details] = ratingDetails[rating.toLowerCase()];
     const shieldUrl = `https://img.shields.io/badge/CO₂-${rating.toUpperCase()}_${parseFloat(co2).toFixed(rating === 'a+' ? 3 : 2).replace(/ /g, '_')}-${color.replace('#', '')}`;
-    const markdown = `[![CO₂ Shield](${shieldUrl})](https://overbrowsing.com/co2-shield)`;
+    const markdown = `[![CO₂ Shield](${shieldUrl})](https://overbrowsing.com/projects/co2-shield)`;
     updateUI({ shieldUrl, markdown, details }, url);
   } catch {
     alert('Invalid URL. Please try again.');
