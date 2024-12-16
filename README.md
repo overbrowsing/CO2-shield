@@ -11,7 +11,7 @@ The CO₂ Shield Generator lets you calculate the environmental impact of a webp
 
 You don't need to download or initialise anything to use this tool. Visit the live version here:
 
-👉 [**CO₂ Shield Generator**](https://overbrowsing.com/projects/co2-shield)  
+👉 [CO₂ Shield Generator](https://overbrowsing.com/projects/co2-shield)  
 
 ## Features
 
