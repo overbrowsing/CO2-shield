@@ -11,7 +11,7 @@ The CO₂ Shield Generator lets you calculate the environmental impact of a webp
 
 You don't need to download or initialise anything to use this tool. Visit the live version here:
 
-👉 [CO₂ Shield Generator](https://overbrowsing.com/projects/co2-shield)  
+👉 [CO₂ Shield Generator](https://overbrowsing.com/projects/co2-shield)
 
 ## Features
 
@@ -21,10 +21,10 @@ You don't need to download or initialise anything to use this tool. Visit the li
 
 ## How to Use
 
-1. **Input a URL**: Type or paste the webpage URL you want to analyse. Ensure it's a valid web address.  
-2. **Submit the Form**: Press 'Enter' or click 'Submit'. The generator fetches CO₂ data from [Beacon](https://digitalbeacon.co/).  
+1. **Input a URL**: Type or paste the webpage URL you want to analyse. Ensure it's a valid web address.
+2. **Submit the Form**: Press 'Enter' or click 'Submit'. The generator fetches CO₂ data from [Beacon](https://digitalbeacon.co/).
 3. **View Results**: See the badge, the markdown snippet, and the detailed CO₂ emissions data.  
-4. **Copy Markdown**: Use the 'Copy' button to copy the badge's markdown and embed it in your projects.  
+4. **Copy Markdown**: Use the 'Copy' button to copy the badge's markdown and embed it in your projects.
 5. **Reset**: Use the 'Reset' button to analyse another webpage.
 
 ## Example
