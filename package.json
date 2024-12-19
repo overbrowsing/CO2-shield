@@ -1,6 +1,6 @@
 {
   "name": "co2-shield",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool to generate CO2 badges for websites",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
