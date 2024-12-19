@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CO2 Shield</title>
+    <meta name="description" content="" />
+    <meta name="theme-color" content="#3c3f35" />
+    <meta property="og:title" content="CO2 Shield" />
+    <meta property="og:description" content="" />
+    <meta
+      property="og:image"
+      content="https://overbrowsing.com/assets/media/card.webp"
+    />
+    <meta property="og:url" content="https://overbrowsing.com" />
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <h1 data-heading="CO₂ Shield">
+          Generate a CO₂ Emissions Shield for Your Github Projects.
+        </h1>
+        <p>
+          The CO₂ Shield Generator lets you easily display the CO₂ emissions of
+          a target URL in your GitHub project with a markdown badge, powered by
+          <a href="https://shields.io" target="_blank">shields.io</a>. Using the
+          <a href="https://thegreenwebfoundation.org/co2-js" target="_blank"
+            >co2.js library</a
+          >
+          from The Green Web Foundation, it calculates the emissions for the
+          given URL. Just enter the URL, click “Generate Shield,” and copy the
+          markdown and paste into your project documentation. Learn more about
+          the project on the
+          <a href="https://github.com/overbrowsing/co2-shield" target="_blank"
+            >CO₂ Shield Github page</a
+          >.
+        </p>
+        <div id="form-container-id"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <a href="https://github.com/overbrowsing" target="_blank">Github</a></li>
+      </div>
+      <div>
+        <a href="https://withcabin.com/privacy/overbrowsing.com" target="_blank">We do not use cookies or tracking.</a>
+      </div>
+      <div id="stats"></div>
+    </footer>
+
+    <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+  </body>
+</html>
+
+<script type="module" src="dist/index.js"></script>
+<script>
+  // Ensure CO2Shield is defined
+  window.onload = function () {
+    const shield = new CO2Shield("form-container-id");
+    shield.initialize();
+  };
+</script>

@@ -1,0 +1,30 @@
+{
+  "name": "co2-shield",
+  "version": "1.0.0",
+  "description": "A tool to generate CO2 badges for websites",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "CO2",
+    "badges",
+    "web",
+    "npm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/overbrowsing/co2-shield.git"
+  },
+  "author": "Headless Horse and printer_scanner",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
