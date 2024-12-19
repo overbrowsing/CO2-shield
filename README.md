@@ -101,7 +101,7 @@ If you prefer not to use a package manager, you can include the library directly
     <div id="app-container"></div>
 
     <!-- Include CO2Shield via UNPKG -->
-    <script src="https://unpkg.com/co2-shield/dist/co2-shield.bundle.js"></script>
+    <script src="https://unpkg.com/co2-shield/dist/index.js"></script>
 
     <script>
       window.onload = () => {
