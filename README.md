@@ -1,3 +1,5 @@
+[![NPM version](https://img.shields.io/npm/v/co2-shield.svg)](https://www.npmjs.com/package/co2-shield)
+[![npm](https://img.shields.io/npm/dt/co2-shield.svg)](https://www.npmtrends.com/co2-shield)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
 [![CO₂ Shield](https://img.shields.io/badge/CO₂-A+_0.041g-58C521)](https://https://overbrowsing.com/co2-shield/)
 
