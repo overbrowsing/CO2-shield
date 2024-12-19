@@ -13,27 +13,30 @@
       content="https://overbrowsing.com/assets/media/card.webp"
     />
     <meta property="og:url" content="https://overbrowsing.com" />
-    <link rel="stylesheet" href="https://unpkg.com/slightly-better-css@1.0.2/dist/slightly-better.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/slightly-better-css@1.0.2/dist/slightly-better.min.css"
+    />
 
     <style>
       :root {
-    /* Base Colors */
-    --color-shade: #d6e1d5; 
-    --color-climate: #3c3f35;
-  
-    /* Accent Colors */
-    --accent-color: #c4c8b1;  
-  
-    /* Background and Text */
-    --background-color: #3c3f35; 
-    --text-color: #d6e1d5; 
-  
-    /* Typography */
-    --font-family: -apple-system, Helvetica, Arial, sans-serif; 
-    --font-size: 15px;       
-    --heading-font-size: 30px;  
-    --subheading-font-size: 20px;
+        /* Base Colors */
+        --color-shade: #d6e1d5;
+        --color-climate: #3c3f35;
 
+        /* Accent Colors */
+        --accent-color: #c4c8b1;
+
+        /* Background and Text */
+        --background-color: #3c3f35;
+        --text-color: #d6e1d5;
+
+        /* Typography */
+        --font-family: -apple-system, Helvetica, Arial, sans-serif;
+        --font-size: 15px;
+        --heading-font-size: 30px;
+        --subheading-font-size: 20px;
+      }
     </style>
   </head>
 
@@ -64,23 +67,23 @@
 
     <footer>
       <div>
-        <a href="https://github.com/overbrowsing" target="_blank">Github</a></li>
+        <a href="https://github.com/overbrowsing" target="_blank">Github</a>
       </div>
       <div>
-        <a href="https://withcabin.com/privacy/overbrowsing.com" target="_blank">We do not use cookies or tracking.</a>
+        <a href="https://withcabin.com/privacy/overbrowsing.com" target="_blank"
+          >We do not use cookies or tracking.</a
+        >
       </div>
       <div id="stats"></div>
     </footer>
 
     <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+    <script type="module" src="dist/index.js"></script>
+    <script>
+      window.onload = function () {
+        const shield = new CO2Shield("form-container-id");
+        shield.initialize();
+      };
+    </script>
   </body>
 </html>
-
-<script type="module" src="https://overbrowsing.com/co2-shield/dist/co2-shield.js"></script>
-<script>
-  // Ensure CO2Shield is defined
-  window.onload = function () {
-    const shield = new CO2Shield("form-container-id");
-    shield.initialize();
-  };
-</script>

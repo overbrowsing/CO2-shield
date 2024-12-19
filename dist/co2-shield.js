@@ -115,6 +115,7 @@ class CO2Shield {
         const container = document.createElement("div");
         container.id = "result";
         container.innerHTML = `
+    <section>
       <h2>Results</h2>
       <p>${targetUrl} • ${rating.toUpperCase()} ${details}</p>
       <img src="${shieldUrl}">
@@ -123,6 +124,7 @@ class CO2Shield {
       <h2>Ratings</h2>
       <div class="rating-details">${detailsList}</div>
       <button id="resetButton">Reset</button>
+    </section>
     `;
         document.body.appendChild(container);
         const copyButton = document.getElementById("copyMarkdown");

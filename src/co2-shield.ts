@@ -152,6 +152,7 @@ class CO2Shield {
     container.id = "result";
 
     container.innerHTML = `
+    <section>
       <h2>Results</h2>
       <p>${targetUrl} • ${rating.toUpperCase()} ${details}</p>
       <img src="${shieldUrl}">
@@ -160,6 +161,7 @@ class CO2Shield {
       <h2>Ratings</h2>
       <div class="rating-details">${detailsList}</div>
       <button id="resetButton">Reset</button>
+    </section>
     `;
 
     document.body.appendChild(container);
