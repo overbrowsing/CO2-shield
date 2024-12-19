@@ -24,7 +24,6 @@ class CO2Shield {
         <input id="websiteUrl" type="text" placeholder="Enter website URL" required>
         <button id="generateShieldButton" type="submit">Generate Shield</button>
       </form>
-      <div id="loading" style="display: none;">Loading...</div>
     `;
         const form = document.getElementById("co2ShieldForm");
         form.addEventListener("submit", (e) => {
@@ -38,7 +37,6 @@ class CO2Shield {
             const url = this.validateUrl(urlInput.value.trim());
             if (!url)
                 return;
-            this.toggleLoading(true);
             const generateButton = document.getElementById("generateShieldButton");
             generateButton.textContent = "Loading...";
             generateButton.disabled = true;
@@ -52,7 +50,6 @@ class CO2Shield {
                 alert("Error fetching data. Please try again later.");
             }
             finally {
-                this.toggleLoading(false);
                 generateButton.textContent = "Generate Shield";
                 generateButton.disabled = false;
             }
@@ -115,7 +112,7 @@ class CO2Shield {
         const container = document.createElement("div");
         container.id = "result";
         container.innerHTML = `
-    <section>
+    <div>
       <h2>Results</h2>
       <p>${targetUrl} • ${rating.toUpperCase()} ${details}</p>
       <img src="${shieldUrl}">
@@ -124,9 +121,13 @@ class CO2Shield {
       <h2>Ratings</h2>
       <div class="rating-details">${detailsList}</div>
       <button id="resetButton">Reset</button>
-    </section>
+    </div>
     `;
-        document.body.appendChild(container);
+        const formContainer = document.getElementById(this.formContainerId);
+        // Check if the form container exists and insert the result container after it
+        if (formContainer) {
+            formContainer.insertAdjacentElement("afterend", container);
+        }
         const copyButton = document.getElementById("copyMarkdown");
         copyButton.addEventListener("click", () => {
             navigator.clipboard.writeText(markdown).then(() => {
@@ -136,10 +137,6 @@ class CO2Shield {
         });
         const resetButton = document.getElementById("resetButton");
         resetButton.addEventListener("click", () => window.location.reload());
-    }
-    toggleLoading(isLoading) {
-        const loadingDiv = document.getElementById("loading");
-        loadingDiv.style.display = isLoading ? "block" : "none";
     }
 }
 export default CO2Shield;

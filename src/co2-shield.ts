@@ -30,7 +30,6 @@ class CO2Shield {
         <input id="websiteUrl" type="text" placeholder="Enter website URL" required>
         <button id="generateShieldButton" type="submit">Generate Shield</button>
       </form>
-      <div id="loading" style="display: none;">Loading...</div>
     `;
 
     const form = document.getElementById("co2ShieldForm") as HTMLFormElement;
@@ -44,8 +43,6 @@ class CO2Shield {
     const urlInput = document.getElementById("websiteUrl") as HTMLInputElement;
     const url = this.validateUrl(urlInput.value.trim());
     if (!url) return;
-
-    this.toggleLoading(true);
 
     const generateButton = document.getElementById(
       "generateShieldButton"
@@ -67,7 +64,6 @@ class CO2Shield {
     } catch (error) {
       alert("Error fetching data. Please try again later.");
     } finally {
-      this.toggleLoading(false);
       generateButton.textContent = "Generate Shield";
       generateButton.disabled = false;
     }
@@ -152,7 +148,7 @@ class CO2Shield {
     container.id = "result";
 
     container.innerHTML = `
-    <section>
+    <div>
       <h2>Results</h2>
       <p>${targetUrl} • ${rating.toUpperCase()} ${details}</p>
       <img src="${shieldUrl}">
@@ -161,10 +157,15 @@ class CO2Shield {
       <h2>Ratings</h2>
       <div class="rating-details">${detailsList}</div>
       <button id="resetButton">Reset</button>
-    </section>
+    </div>
     `;
 
-    document.body.appendChild(container);
+    const formContainer = document.getElementById(this.formContainerId);
+
+    // Check if the form container exists and insert the result container after it
+    if (formContainer) {
+      formContainer.insertAdjacentElement("afterend", container);
+    }
 
     const copyButton = document.getElementById("copyMarkdown")!;
     copyButton.addEventListener("click", () => {
@@ -176,11 +177,6 @@ class CO2Shield {
 
     const resetButton = document.getElementById("resetButton")!;
     resetButton.addEventListener("click", () => window.location.reload());
-  }
-
-  private toggleLoading(isLoading: boolean): void {
-    const loadingDiv = document.getElementById("loading")!;
-    loadingDiv.style.display = isLoading ? "block" : "none";
   }
 }
 

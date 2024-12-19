@@ -10,6 +10,5 @@ declare class CO2Shield {
     private generateShieldData;
     private generateDetailsList;
     private updateUI;
-    private toggleLoading;
 }
 export default CO2Shield;
