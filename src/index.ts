@@ -1,7 +1,6 @@
-import CO2Shield from "./co2-shield.js";
+import CO2Shield from './co2-shield';
 
-if (typeof window !== "undefined") {
-  (window as any).CO2Shield = CO2Shield;
-}
-
-export default CO2Shield;
+window.onload = () => {
+    const co2ShieldInstance = new CO2Shield("app-container");
+    co2ShieldInstance.initialize();
+};
