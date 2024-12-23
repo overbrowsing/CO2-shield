@@ -1,4 +1,4 @@
-declare class CO2Shield {
+export default class CO2Shield {
     private formContainerId;
     constructor(formContainerId: string);
     initialize(): void;
@@ -7,8 +7,7 @@ declare class CO2Shield {
     private validateUrl;
     private fetchCO2Data;
     private getRatingDetails;
-    private generateShieldData;
-    private generateDetailsList;
     private updateUI;
+    private copy;
+    private reset;
 }
-export default CO2Shield;
