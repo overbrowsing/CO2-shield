@@ -98,15 +98,7 @@ If you prefer not to use a package manager, you can include the library directly
   <div id="app-container"></div>
 
   <!-- 2. Add the Library via CDN -->
-  <script src="https://unpkg.com/co2-shield/dist/index.js"></script>
-  
-  <!-- 3. Initialise the Library -->
-  <script>
-    window.onload = () => {
-      const libraryInstance = new LibraryName("app-container");
-      libraryInstance.initialize();
-    };
-  </script>
+  <script src="https://unpkg.com/co2-shield/dist/index.js" type="module"></script>
 
 </body>
 
