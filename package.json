@@ -1,7 +1,7 @@
 {
   "name": "co2-shield",
   "version": "1.0.2",
-  "description": "A tool to generate CO2 badges for websites",
+  "description": "Calculate the environmental impact of a webpage and display it in your GitHub project as a shields.io badge.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
