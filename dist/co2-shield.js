@@ -22,7 +22,7 @@ class CO2Shield {
         container.innerHTML = `
       <form id="co2ShieldForm">
         <input id="websiteUrl" type="text" placeholder="Enter website URL" required>
-        <button id="generateShieldButton" type="submit">Generate Shield</button>
+        <button id="generateShieldButton" type="submit">Submit</button>
       </form>
     `;
         const form = document.getElementById("co2ShieldForm");
