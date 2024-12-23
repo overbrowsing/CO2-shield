@@ -7,7 +7,7 @@
 
 ## Overview
 
-The CO₂ Shield Generator lets you calculate the environmental impact of a webpage and display it in your GitHub project as a [Shields.io](https://shields.io") badge, powered by [Beacon](https://digitalbeacon.co), which uses the [OneByte model](https://theshiftproject.org/en/lean-ict-2/) for calculating emissions created by The Shift Project.
+The CO₂ Shield Generator lets you calculate the environmental impact of a webpage and display it in your GitHub project as a [Shields.io](https://shields.io") badge, powered by [Beacon](https://digitalbeacon.co), which uses the [OneByte model](https://theshiftproject.org/en/lean-ict-2) for calculating emissions created by The Shift Project.
 
 ## Live Application
 
@@ -17,14 +17,14 @@ You don't need to download or initialise anything to use this application. Visit
 
 ## Features
 
-- **Badge Creation**: Generates a badge using the [Shields.io](https://shields.io/) service.
+- **Badge Creation**: Generates a badge using the [Shields.io](https://shields.io) service.
 - **Markdown Output**: Provides a markdown snippet to embed the badge in project documentation.
 - **Rating Details**: Displays the CO₂e emissions per webpage view, along with a breakdown of ratings.
 
 ## How to Use
 
 1. **Input a URL**: Type or paste the webpage URL you want to analyse. Ensure it's a valid web address.
-2. **Submit the Form**: Press 'Enter' or click 'Submit'. The generator fetches CO₂e data from [Beacon](https://digitalbeacon.co/).
+2. **Submit the Form**: Press 'Enter' or click 'Submit'. The generator fetches CO₂e data from [Beacon](https://digitalbeacon.co).
 3. **View Results**: See the badge, the markdown snippet, and the detailed CO₂e emissions data.
 4. **Copy Markdown**: Use the 'Copy' button to copy the markdown and paste it into your project.
 5. **Reset**: Use the 'Reset' button to analyse another webpage.
