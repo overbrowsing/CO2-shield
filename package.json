@@ -1,6 +1,6 @@
 {
   "name": "co2-shield",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Calculate the environmental impact of a webpage and display it in your GitHub project as a Shields.io badge.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -74,25 +74,25 @@ export default class CO2Shield {
     const appContainer = document.getElementById(this.formContainerId) as HTMLElement;
 
     appContainer.innerHTML = `
-          <div id="result">
-              <h2>Results</h2>
-              <p>${targetUrl} • ${details} • Scroll down to see the ratings.</p>
-              <img src="${shieldUrl}" alt="CO₂ Shield" style="height:20px">
-              <pre>${markdown}</pre>
-              <button id="copy">Copy</button>
-          </div>
-          <div>
-              <h2>Ratings</h2>
-              <p>These measurements are for new visitors. Returning visitors have a lower footprint due to caching.</p>
-              <table>
-                  <thead><tr><th>Rating</th><th>Color</th><th>CO₂e Emissions per View</th></tr></thead>
-                  <tbody>${Object.keys(CO2Shield.ratingDetails).map(rating => {
+        <div id="result">
+            <h2>Results</h2>
+            <p>${targetUrl} • ${details} • Scroll down to see the ratings.</p>
+            <img src="${shieldUrl}" alt="CO₂ Shield" style="height:20px">
+            <pre>${markdown}</pre>
+            <button id="copy">Copy</button>
+        </div>
+        <div>
+            <h2>Ratings</h2>
+            <p>These measurements are for new visitors. Returning visitors have a lower footprint due to caching.</p>
+            <table>
+                <thead><tr><th>Rating</th><th>Color</th><th>CO₂e Emissions per View</th></tr></thead>
+                <tbody>${Object.keys(CO2Shield.ratingDetails).map(rating => {
       const [color, details] = CO2Shield.ratingDetails[rating];
       return `<tr><td style="text-align:center;">${rating.toUpperCase()}</td><td style="text-align:center;color:${color}">●</td><td>${details}</td></tr>`;
     }).join('')}</tbody>
-              </table>
-              <button id="reset">Reset</button>
-          </div>`;
+            </table>
+            <button id="reset">Reset</button>
+        </div>`;
     document.querySelector('#copy')?.addEventListener('click', this.copy.bind(this));
     document.querySelector('#reset')?.addEventListener('click', this.reset.bind(this));
   }
