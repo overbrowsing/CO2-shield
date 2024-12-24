@@ -7,7 +7,7 @@
 
 ## Overview
 
-The CO₂ Shield Generator lets you calculate the environmental impact of a webpage and display it in your GitHub project as a [Shields.io](https://shields.io") badge, powered by [Beacon](https://digitalbeacon.co), which uses the [OneByte model](https://theshiftproject.org/en/lean-ict-2) for calculating emissions created by The Shift Project.
+The CO₂ Shield Generator allows you to assess the environmental impact of your project's web page and showcase it in your GitHub project as a [Shields.io](https://shields.io") badge. It is powered by [Beacon](https://digitalbeacon.co), which utilises the [OneByte model](https://theshiftproject.org/en/lean-ict-2) developed by The Shift Project to calculate emissions.
 
 ## Live Application
 
