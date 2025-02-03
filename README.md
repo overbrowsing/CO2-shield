@@ -84,10 +84,11 @@ If you prefer not to use a package manager, you can include the library directly
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width">
   <title>CO₂ Shield</title>
 </head>
 
@@ -97,7 +98,6 @@ If you prefer not to use a package manager, you can include the library directly
 
   <!-- 2. Add the Library via CDN -->
   <script src="https://unpkg.com/co2-shield/dist/index.js" type="module"></script>
-
 </body>
 
 </html>
